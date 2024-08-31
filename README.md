@@ -20,7 +20,7 @@ The Zoo Management API is a Spring Boot application designed to manage various a
 - Java 21 or higher
 - Maven 3.6.0 or higher
 - A relational database (PostgreSQL), with the following properties:
-  - URL: jdbc:postgresql://localhost:5432/postgres
+  - URL: jdbc:postgresql://localhost:5433/postgres
   - username: to be defined
   - password: to be defined
 
