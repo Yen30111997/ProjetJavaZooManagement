@@ -1,0 +1,37 @@
+server:
+  port: 52001
+  servlet:
+    context-path: /
+http:
+  cors:
+    allow:
+      credentials: true
+      headers: app Origin, Content-Type, Accept, Authorization, Access-Control-Request-Headers
+      methods: GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH
+      origin: http://localhost:4200
+    max:
+      age: 3600
+    expose:
+      headers:
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: zoo management api
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate.default_schema: public
+      hibernate.format_sql: true
+      hibernate.jdbc.time_zone: UTC
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: yenyencute
